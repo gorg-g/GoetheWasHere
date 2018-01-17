@@ -207,8 +207,8 @@ GameObject:
   - component: {fileID: 125899475}
   - component: {fileID: 125899474}
   - component: {fileID: 125899473}
-  - component: {fileID: 125899472}
   - component: {fileID: 125899478}
+  - component: {fileID: 125899472}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -1543,10 +1543,6 @@ Prefab:
     - target: {fileID: 1678039187384412, guid: 697abbe9ecd78420ba46e636a33fe651, type: 2}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704061975612054, guid: 697abbe9ecd78420ba46e636a33fe651, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697abbe9ecd78420ba46e636a33fe651, type: 2}
