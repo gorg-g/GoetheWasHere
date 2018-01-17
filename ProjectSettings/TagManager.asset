@@ -8,6 +8,16 @@ TagManager:
   - Cup
   - Ball
   - Arrow
+  - minus
+  - slow
+  - Fire
+  - fast
+  - bigplus
+  - bigminus
+  - plus
+  - ScoreManager
+  - MinigameManager
+  - Score
   layers:
   - Default
   - TransparentFX
