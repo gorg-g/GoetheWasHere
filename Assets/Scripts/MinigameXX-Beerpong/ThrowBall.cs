@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class ThrowBall : MonoBehaviour 
 {
-    [HideInInspector]
     public bool isThrown = false;
-    [HideInInspector]
     public bool isFlying = false;
 
     private Rigidbody rb;
-    private Vector3 lastPos;
+    private float timeOutCounter;
 
 	void Start () 
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
+        timeOutCounter = 0.0f;
 	}
 	
     void FixedUpdate ()
@@ -23,15 +22,13 @@ public class ThrowBall : MonoBehaviour
         if (isThrown)
         {
             isFlying = StillFlying();
+            timeOutCounter += Time.deltaTime;
         }
     }
 
     bool StillFlying()
     {
-        float deltaY = lastPos.y - transform.position.y;
-        lastPos = transform.position;
-
-        if (((deltaY < Mathf.Pow(10, -6)) && (deltaY >= 0)) || (transform.position.y <= 0.0f))
+        if (rb.IsSleeping() || (transform.position.y <= -1.0f) || timeOutCounter > 10.0f)
         {
             return false;
         }
@@ -43,6 +40,7 @@ public class ThrowBall : MonoBehaviour
 
 	public void Throw (float angle, float magnitude) 
     {
+        timeOutCounter = 0.0f;
         Vector3 throwForce = Quaternion.Euler(0.0f, 0.0f, angle) * (new Vector3(2.0f, 0.0f, 0.0f));
         throwForce = throwForce * magnitude;
         rb.useGravity = true;
@@ -52,17 +50,19 @@ public class ThrowBall : MonoBehaviour
 
     public void StopMovement ()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.useGravity = false;
-        isThrown = false;
         StartCoroutine(RespawnBall());
-
     }
 
     private IEnumerator RespawnBall()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForFixedUpdate();
         transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+        rb.useGravity = false;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        timeOutCounter = 0.0f;
+        isThrown = false;
+        isFlying = false;
     }
 }

@@ -12,7 +12,8 @@ public class BPPlayerController : MonoBehaviour
     private float distanceCameraPlayer;
     private float timer;
     private Camera cam;
-    private bool isRespawning = false;
+
+    public bool isRespawning;
 
 	void Start () 
     {
@@ -37,7 +38,7 @@ public class BPPlayerController : MonoBehaviour
 	
 	public void Move (Vector3 inputPosition) 
     {
-        if (ball.isThrown == false && isRespawning == false)
+        if (ball.isThrown == false)
         {
             distanceCameraPlayer = (cam.transform.position - transform.position).magnitude;
             newPosition = cam.ScreenToWorldPoint(new Vector3(inputPosition.x, inputPosition.y, distanceCameraPlayer));
@@ -53,7 +54,7 @@ public class BPPlayerController : MonoBehaviour
 
     public void Throw ()
     {
-        if (ball.isThrown == false && isRespawning == false)
+        if (ball.isThrown == false && ball.isFlying == false)
         {
             float angle = 90.0f + arrowTrans.localEulerAngles.z;
             float magnitude = arrowTrans.localScale.y / 10.0f;
@@ -74,7 +75,7 @@ public class BPPlayerController : MonoBehaviour
 
     private IEnumerator RespawnArrow()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         transform.localPosition = playerInitPositionLoc;
         arrowTrans.localRotation = Quaternion.Euler(0.0f, 0.0f, -90.0f);
         arrowTrans.localScale = new Vector3(5.0f, 5.0f, 5.0f);

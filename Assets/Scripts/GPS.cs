@@ -14,10 +14,11 @@ public class GPS : MonoBehaviour {
 	public float longitudeBuilding;
 	public Text GPSText;
 	public Text areaText;
-//	1 = Humbolt
-//	2 = Kirchhoff
-//	3 = Zuse
-//	4 = Helmholtz
+
+    //	1 = Humbolt
+    //	2 = Kirchhoff
+    //	3 = Zuse
+    //	4 = Helmholtz
 	public int building;
 
 	private double distance;
