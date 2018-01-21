@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MiniGameManager : MonoBehaviour 
+public class MiniGameManager : MonoBehaviour 
 {
     public GameObject gameIntroPanel;
     public GameObject gameEndPanel;
