@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -460,8 +460,8 @@ MonoBehaviour:
   plus: {fileID: 1777636053382482, guid: a09131b9df97c0349a20049cb6e7c1ac, type: 2}
   fast: {fileID: 1712393227314302, guid: 2daefb47823458a4ebd0b22ed72e16ac, type: 2}
   slow: {fileID: 1496902383994756, guid: 2463f54fd2377eb44bd6aad43fa67a06, type: 2}
-  bigplus: {fileID: 1314547085732900, guid: 54c56bac0bdc80e4ea7582dfc3119f07, type: 2}
-  bigminus: {fileID: 1084412209222582, guid: 83a3efef8a5c44549b5922117545cd45, type: 2}
+  bigplus: {fileID: 1160264469852082, guid: f79e8edf349a92844bb69155b7b70e74, type: 2}
+  bigminus: {fileID: 1642415311774488, guid: 3741c8d22cf17db4aaae1aaafdf0d0b9, type: 2}
   parent: {fileID: 1822863594}
   restartText: {fileID: 0}
   gameOverText: {fileID: 1067248604}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 580300101}
   m_Layer: 0
   m_Name: Directional Light
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,7 +559,6 @@ GameObject:
   - component: {fileID: 676769760}
   - component: {fileID: 676769759}
   - component: {fileID: 676769758}
-  - component: {fileID: 676769757}
   - component: {fileID: 676769761}
   m_Layer: 0
   m_Name: Boundary
@@ -568,40 +567,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &676769757
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 676769756}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!65 &676769758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2079,8 +2044,8 @@ MonoBehaviour:
   mExtendedTracking: 0
   mAspectRatio: 0.719298
   mImageTargetType: 0
-  mWidth: 50
-  mHeight: 35.9649
+  mWidth: 20
+  mHeight: 14.38596
 --- !u!4 &1822863600
 Transform:
   m_ObjectHideFlags: 0
@@ -2089,7 +2054,7 @@ Transform:
   m_GameObject: {fileID: 1822863594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 676769760}
   - {fileID: 559413446}
@@ -2127,7 +2092,7 @@ GameObject:
   - component: {fileID: 1919114814}
   m_Layer: 0
   m_Name: ARCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

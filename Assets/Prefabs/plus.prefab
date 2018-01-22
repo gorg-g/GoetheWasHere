@@ -175,9 +175,10 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777636053382482}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a16bf1c4cac8a594d99a3b843297ce6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  rotation: {x: 0, y: 0.25881904, z: 0, w: 0.9659258}
