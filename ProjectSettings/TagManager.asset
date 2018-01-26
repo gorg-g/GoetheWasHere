@@ -8,6 +8,19 @@ TagManager:
   - Cup
   - Ball
   - Arrow
+  - minus
+  - slow
+  - Fire
+  - fast
+  - bigplus
+  - bigminus
+  - plus
+  - ScoreManager
+  - MinigameManager
+  - HMenuLevel
+  - HMenuLockText
+  - HMenuScore
+  - HMenuLockSym
   layers:
   - Default
   - TransparentFX
