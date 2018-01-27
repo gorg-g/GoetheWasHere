@@ -38,7 +38,7 @@ public class Collide : MonoBehaviour
             scoreManager.IncreaseScore(tSinceLastHit);
             tSinceLastHit = 0.0f;
 
-            gameManager.nCupsHit += 1;
+            gameManager.IncreaseCupCount();
 
             other.gameObject.transform.parent.gameObject.SetActive(false);
             other.gameObject.SetActive (false);

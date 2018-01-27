@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BPGameManager : MiniGameManager 
 {   
-    public byte nCupsHit;
+    byte nCupsHit;
 
 	// Update is called once per frame
 	void Update () 
@@ -15,4 +15,9 @@ public class BPGameManager : MiniGameManager
         }
 		
 	}
+
+    public void IncreaseCupCount()
+    {
+        nCupsHit += 1;
+    }
 }
