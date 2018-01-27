@@ -101,8 +101,4 @@ public class oneTime : MonoBehaviour {
 		gameIsOver = false;
 	}
 
-
-
 }
-
-

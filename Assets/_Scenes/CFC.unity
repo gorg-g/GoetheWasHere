@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -398,7 +398,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 559413446}
-  - component: {fileID: 559413447}
   - component: {fileID: 559413448}
   m_Layer: 0
   m_Name: GameController
@@ -420,31 +419,6 @@ Transform:
   m_Father: {fileID: 1822863600}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &559413447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 559413445}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fec085dbfc4b8b4583199046aa895d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minus: {fileID: 1283649297698212, guid: 1b3a195418c18c7459d3f89e2e19a6c3, type: 2}
-  plus: {fileID: 0}
-  fast: {fileID: 0}
-  slow: {fileID: 0}
-  spawnValues: {x: 1.5, y: 0, z: 3}
-  hazardCount: 100
-  spawnWait: 1
-  startWait: 1
-  waveWait: 1
-  scoreText: {fileID: 984931488}
-  restartText: {fileID: 0}
-  gameOverText: {fileID: 0}
-  restartButton: {fileID: 0}
-  score: 0
 --- !u!114 &559413448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,11 +615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  level: 0
   joystick: {fileID: 0}
-  gc: {fileID: 559413445}
+  gc: {fileID: 0}
   sp: {fileID: 428487677}
   en: {fileID: 1058980093}
-  level: 0
 --- !u!54 &750120246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -746,11 +720,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  level: 1
   joystick: {fileID: 1344126894}
-  gc: {fileID: 559413445}
+  gc: {fileID: 1392108776}
   sp: {fileID: 428487677}
   en: {fileID: 1058980093}
-  level: 1
 --- !u!54 &838459031
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -905,6 +879,29 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114970760048248176, guid: 697abbe9ecd78420ba46e636a33fe651,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934957139247180, guid: 697abbe9ecd78420ba46e636a33fe651, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787166192352776, guid: 697abbe9ecd78420ba46e636a33fe651, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528496468438782, guid: 697abbe9ecd78420ba46e636a33fe651,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 4200.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 114317136044446494, guid: 697abbe9ecd78420ba46e636a33fe651,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 697abbe9ecd78420ba46e636a33fe651, type: 2}
@@ -1337,6 +1334,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ed6e8733547f24382a64df21232950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1392108773 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1704061975612054, guid: 697abbe9ecd78420ba46e636a33fe651,
+    type: 2}
+  m_PrefabInternal: {fileID: 984931487}
+--- !u!114 &1392108776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392108773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d027e89dc9b7f2d42b710d93d63d6bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 984931488}
+  highscoreText: {fileID: 2054994183}
+  score: 0
 --- !u!1 &1673741438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1802,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2054994183 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114062585466136280, guid: 697abbe9ecd78420ba46e636a33fe651,
+    type: 2}
+  m_PrefabInternal: {fileID: 984931487}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &2081693512 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1787166192352776, guid: 697abbe9ecd78420ba46e636a33fe651,

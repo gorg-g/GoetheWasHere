@@ -12,16 +12,9 @@ public class Mover : MonoBehaviour {
 
 	void Start()
 	{
-		//hole Rigidbody von aktuellem Gameobject
-		//rb = GetComponent <Rigidbody> ();
-		//bewege Rigidbody
-		//rb.velocity = transform.forward * speed;
-		Debug.Log ("ESBEWEGTSICHESBEGETSICH");
+
+		//Debug.Log ("ESBEWEGTSICHESBEGETSICH");
 		plr = GameObject.FindWithTag ("Player");
-
-       
-
-
 	}
 
 	void Update()
@@ -33,14 +26,12 @@ public class Mover : MonoBehaviour {
 	}
 
 
-	/*public void increaseSpeed(){
-		speed = -100;
-		Debug.Log ("SCHNELLERGEMACHTSCHNELLERGEMACHTSCHNELLERGEMACHT");
-	
-	}*/
+
 
 
 	public void updateSpeed(){
+        
+        //Updated GlobalGameSpeed
 
 		if (plr.GetComponent<PlayerController> ().level == 0) {
 			speed = 10;
