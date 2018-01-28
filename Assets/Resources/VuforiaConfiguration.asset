@@ -44,9 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - GebaeudePlaene
+    - target_images
     dataSetsToActivate:
-    - GebaeudePlaene
+    - target_images
   videoBackground:
     clippingMode: 0
     numDivisions: 2

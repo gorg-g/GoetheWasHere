@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="He_Portrait" size="1.000000 1.188561" />
+    <ImageTarget name="K_Keller" size="1.000000 0.788670" />
+    <ImageTarget name="K_2013" size="1.000000 0.730293" />
+    <ImageTarget name="Helmholtz_oben_Portrait" size="1.000000 0.836131" />
+    <ImageTarget name="Helmholtz_unten_Fluchtplan" size="1.000000 1.571918" />
+    <ImageTarget name="Kirchhoff_ersterStock_Fluchtplan" size="1.000000 0.835012" />
+    <ImageTarget name="Zuse_unten_Kunstwerk" size="1.000000 0.526105" />
+    <ImageTarget name="Zuse_EG_Fluchtplan" size="1.000000 0.703251" />
+    <ImageTarget name="Kirchhoff_ersterStock_Portrait" size="1.000000 0.775172" />
+    <ImageTarget name="Hu_oben" size="1.000000 1.005332" />
+    <ImageTarget name="Hu_unten" size="50.000000 35.986328" />
+  </Tracking>
+</QCARConfig>
