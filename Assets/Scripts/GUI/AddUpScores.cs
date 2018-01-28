@@ -9,7 +9,7 @@ public class AddUpScores : MonoBehaviour {
     {
         Text totalScoretext = GetComponent<Text>();
 
-        GameObject[] scores = GameObject.FindGameObjectsWithTag("Score");
+        GameObject[] scores = GameObject.FindGameObjectsWithTag("HMenuScore");
 
         int totalscore = 0;
 

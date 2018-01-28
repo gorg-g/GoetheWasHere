@@ -17,7 +17,12 @@ TagManager:
   - plus
   - ScoreManager
   - MinigameManager
-  - Score
+  - HMenuLevel
+  - HMenuLockText
+  - HMenuScore
+  - HMenuLockSym
+  - DialogueBox
+  - Scientist
   layers:
   - Default
   - TransparentFX

@@ -6,14 +6,44 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/MainMenu.unity
+    path: Assets/_Scenes/00-MainMenu.unity
     guid: ac0335114b40545e49f9232c5d799898
   - enabled: 1
-    path: Assets/_Scenes/Introduction.unity
-    guid: 9c1ea6200121a4c339ffd9b5d091849a
+    path: Assets/_Scenes/01-Introduction.unity
+    guid: 097506ed9d0c34fdfb19a44c27168218
   - enabled: 1
-    path: Assets/_Scenes/Beerpong.unity
+    path: Assets/_Scenes/02-Humboldt/02.1-CFC.unity
+    guid: 717349df772070c4987c2c05c8458cf8
+  - enabled: 1
+    path: Assets/_Scenes/03-Kirchhoff/03.1-CircuitRacing.unity
+    guid: 10ac0168caf0b42fdbbf91bd989b048a
+  - enabled: 1
+    path: Assets/_Scenes/04-Helmholtz/04.1-Beerpong.unity
     guid: 1c86ef2b1b71643ada21bd4769d183da
   - enabled: 1
-    path: Assets/_Scenes/CFC.unity
-    guid: 717349df772070c4987c2c05c8458cf8
+    path: Assets/_Scenes/05-Zuse/05.1-BinaryFlood.unity
+    guid: cd8ec4bd4a0124819b19fedf9afa9e5a
+  - enabled: 1
+    path: Assets/_Scenes/02-Humboldt/02.0-Dialogue.unity
+    guid: a87d47aca6ec244c098afa2181a6b3ae
+  - enabled: 1
+    path: Assets/_Scenes/02-Humboldt/02.2-Dialogue2.unity
+    guid: f44e456236fa24cd089f8f0a3132aba9
+  - enabled: 1
+    path: Assets/_Scenes/03-Kirchhoff/03.0-Dialogue.unity
+    guid: c62a8b4c028e14e93a5a18d23a422b86
+  - enabled: 1
+    path: Assets/_Scenes/03-Kirchhoff/03.2-Dialogue2.unity
+    guid: ecf9e7f1e587741268115dd39a12054c
+  - enabled: 1
+    path: Assets/_Scenes/04-Helmholtz/04.0-Dialogue.unity
+    guid: 0ab4cad5e94cb4a238060c3e19bad6db
+  - enabled: 1
+    path: Assets/_Scenes/04-Helmholtz/04.2-Dialogue2.unity
+    guid: cde1d766e721940698b4783508d7e643
+  - enabled: 1
+    path: Assets/_Scenes/05-Zuse/05.0-Dialogue.unity
+    guid: 80b0d46d9047248debcb2a6f4808998c
+  - enabled: 1
+    path: Assets/_Scenes/05-Zuse/05.2-Dialogue2.unity
+    guid: 5024bb8d5f71b4a52ab2a758f57e2e46
