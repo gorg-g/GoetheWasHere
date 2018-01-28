@@ -15,6 +15,10 @@ public class UserInput : MonoBehaviour
         {
             gameManager = gameManagerGO.GetComponent<BPGameManager>();
         }
+        else
+        {
+            Debug.Log("Couldn't find MinigameManager. Did you forget the tag?");
+        }
 
         player = GetComponent<BPPlayerController>();
     }

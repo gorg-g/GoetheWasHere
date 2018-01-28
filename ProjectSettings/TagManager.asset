@@ -21,6 +21,8 @@ TagManager:
   - HMenuLockText
   - HMenuScore
   - HMenuLockSym
+  - DialogueBox
+  - Scientist
   layers:
   - Default
   - TransparentFX
