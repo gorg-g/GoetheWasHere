@@ -64,11 +64,16 @@ public class oneTime : MonoBehaviour {
 				int rndm = Random.Range (0, 11);
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-
-				var m = Instantiate (collect [rndm], spawnPosition, spawnRotation);
+                var m = Instantiate (collect [rndm], spawnPosition, spawnRotation);
 				m.transform.parent = GameObject.Find ("enemies").transform;
+                if (collect[rndm] == fast || collect[rndm] == slow)
+                {
+                    m.transform.Rotate(new Vector3(0, 0, 90));
+                }
 
-				yield return new WaitForSeconds (spawnWait);
+
+
+                yield return new WaitForSeconds (spawnWait);
 			}
 		}	
 	}
