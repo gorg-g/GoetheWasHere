@@ -29,30 +29,14 @@ public class oneTime : MonoBehaviour {
 	public float waveWait;
 
 	public float minutes;
-	int rndm;
 
 	private bool gameIsOver;
 	private bool restart;
 
-	//public GameObject buffer;
-
-	//GameController buffer = GetComponent<GameController>();
-
-
-
 	// Use this for initialization
-	void Start () {
-		/**
-		Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-		Quaternion spawnRotation = Quaternion.identity;
-		var m = Instantiate (minus, spawnPosition, spawnRotation) as GameObject;
-		m.transform.parent = GameObject.Find ("ImageTarget").transform;
-		**/
-		//newGame = GameObject.Find ("restartBut").GetComponent<Button>();
-		//newGame.gameObject.SetActive (false);
-
-
-		collect [0] = plus;
+	void Start () 
+    {
+   		collect [0] = plus;
 		collect [1] = plus;
 		collect [2] = plus;
 		collect [3] = plus;
@@ -66,48 +50,29 @@ public class oneTime : MonoBehaviour {
 
 		StartCoroutine (SpawnWaves ());
 		StartCoroutine (GameOver ());
-
-		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-		
-	}
-
-
-	IEnumerator SpawnWaves(){
+	IEnumerator SpawnWaves()
+    {
 		//Zeit bevor es losgeht
 		yield return new WaitForSeconds (startWait);
 
 		//Spawn der Meteoriten, zeitverzögert, damit sie sich nicht gegenseitig wegficken
 		while (true) {
-			for (int i = 0; i < hazardCount; i++) {
-				rndm = Random.Range (0, 11);
+			for (int i = 0; i < hazardCount; i++) 
+            {
+				int rndm = Random.Range (0, 11);
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-				//var m = Instantiate (minus, spawnPosition, spawnRotation);
-				//var p = Instantiate(plus, spawnPosition, spawnRotation);
+
 				var m = Instantiate (collect [rndm], spawnPosition, spawnRotation);
 				m.transform.parent = GameObject.Find ("enemies").transform;
-				//p.transform.parent = GameObject.Find ("ImageTarget").transform;
+
 				yield return new WaitForSeconds (spawnWait);
 			}
-
-
-			/*
-			yield return new WaitForSeconds (waveWait);
-			if (gameOver) {
-
-				restartText.text = "Press 'R' to Restart";
-				restart = true;
-				break;
-			}
-			**/
-		}
-			
+		}	
 	}
+
 	IEnumerator GameOver()
 	{
 		yield return new WaitForSeconds (minutes * 60);
@@ -124,10 +89,6 @@ public class oneTime : MonoBehaviour {
 
 		gameIsOver = true;
 		yield return new WaitForSeconds (2);
-
-		//Aktiviere Button
-		//newGame.gameObject.SetActive (true);
-
 
 	}
 
