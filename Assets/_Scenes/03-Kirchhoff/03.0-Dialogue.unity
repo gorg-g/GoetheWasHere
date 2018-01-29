@@ -845,7 +845,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 688479888}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.507}
+  m_LocalPosition: {x: 0, y: 0.2, z: -0.507}
   m_LocalScale: {x: 0.62524813, y: 0.62524813, z: 0.62524813}
   m_Children:
   - {fileID: 532572528}
@@ -3909,7 +3909,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: aedd981496f64b80a7f7bd58b8073b09, type: 3}
+        m_Texture: {fileID: 2800000, guid: b08af5054b5840ba8e200773e82e686b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
