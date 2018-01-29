@@ -12,14 +12,6 @@ public class GPS : MonoBehaviour
     float latitudePlayer;
     float longitudePlayer;
 
-    public Text latText;
-    public Text lonText;
-
-    public Text HumboldtDist;
-    public Text ZuseDist;
-    public Text HelmholtzDist;
-    public Text KirchhoffDist;
-
     //  0 = Unknown Location (=game stays where it is)
     //	2 = Humbolt
     //	3 = Kirchhoff
@@ -37,9 +29,6 @@ public class GPS : MonoBehaviour
             latitudePlayer = Input.location.lastData.latitude;
             longitudePlayer = Input.location.lastData.longitude;
 
-            latText.text = latitudePlayer.ToString();
-            lonText.text = longitudePlayer.ToString();
-
             double HumboldtDistance = Haversinecalculate(latitudePlayer, longitudePlayer,
                                                          getLatitude(2), getLongitude(2));
             double KirchhoffDistance = Haversinecalculate(latitudePlayer, longitudePlayer,
@@ -48,12 +37,7 @@ public class GPS : MonoBehaviour
                                              getLatitude(4), getLongitude(4));
             double ZuseDistance = Haversinecalculate(latitudePlayer, longitudePlayer,
                                  getLatitude(5), getLongitude(5));
-
-            HumboldtDist.text = HumboldtDistance.ToString();
-            ZuseDist.text = ZuseDistance.ToString();
-            HelmholtzDist.text = HelmholtzDistance.ToString();
-            KirchhoffDist.text = KirchhoffDistance.ToString();
-
+            
             double[] distances = { HumboldtDistance, KirchhoffDistance, HelmholtzDistance, ZuseDistance };
 
             // find smallest distance

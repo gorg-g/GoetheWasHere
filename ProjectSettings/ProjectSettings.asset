@@ -160,7 +160,7 @@ PlayerSettings:
   applicationIdentifier:
     iOS: com.SchrankGames.GoetheWasHere
   buildNumber:
-    iOS: 8
+    iOS: 9
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0

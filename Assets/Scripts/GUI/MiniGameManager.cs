@@ -11,12 +11,10 @@ public class MiniGameManager : MonoBehaviour
     public string minigameName;
     public int CheckLocationInterval;
 
-    public Text scientistText;
-
     public enum Buildings {Humboldt=2, Kirchhoff=3, Helmholtz=4, Zuse=5};
     public Buildings building;
 
-    private BPScoreManager scoreManager;
+    protected ScoreManager scoreManager;
     private GPS gpsChecker;
 
     protected bool gameStarted;
@@ -32,13 +30,10 @@ public class MiniGameManager : MonoBehaviour
 
         gpsChecker = GetComponent<GPS>();
         StartCoroutine(CheckPlayerLocation());
+    }
 
-        GameObject scoreManagerGO = GameObject.FindWithTag("ScoreManager");
-        if (scoreManagerGO != null)
-        {
-            scoreManager = scoreManagerGO.GetComponent<BPScoreManager>();
-            scoreManager.ReadHighscore();
-        }
+    protected virtual void MinigameSpecificStart()
+    {       
     }
 
     IEnumerator CheckPlayerLocation()
@@ -57,64 +52,54 @@ public class MiniGameManager : MonoBehaviour
 
             previousLocation = playerLocation;
 
-            switch (playerLocation)
-            {
-                case (int) Buildings.Humboldt:
-                    scientistText.text = "I'm inside Humboldt *pedomoon intensifies* " + consecutiveCounter.ToString();
-
-                    // Load Humboldt scene if GPS Location is consecutively Humboldt for long enough
-                    if ((!(building == Buildings.Humboldt)) && consecutiveCounter > 3)
-                    {
-                        print(building);
-                        LoadByIndex(2);
-                    }
+            //switch (playerLocation)
+            //{
+            //    case (int) Buildings.Humboldt:
+            //        // Load Humboldt scene if GPS Location is consecutively Humboldt for long enough
+            //        if ((!(building == Buildings.Humboldt)) && consecutiveCounter > 3)
+            //        {
+            //            print(building);
+            //            LoadByIndex(2);
+            //        }
                     
-                    break;
+            //        break;
 
-                case (int) Buildings.Kirchhoff:
-                    scientistText.text = "I'm inside Kirchhoff *pedomoon intensifies* " + consecutiveCounter.ToString();
-
-                    // Load Kirchhoff scene if GPS Location is consecutively Humboldt for long enough
-                    if ((!(building == Buildings.Kirchhoff)) && consecutiveCounter > 3)
-                    {
-                        print(building);
-                        LoadByIndex(3);
-                    }
+            //    case (int) Buildings.Kirchhoff:
+            //        // Load Kirchhoff scene if GPS Location is consecutively Humboldt for long enough
+            //        if ((!(building == Buildings.Kirchhoff)) && consecutiveCounter > 3)
+            //        {
+            //            print(building);
+            //            LoadByIndex(3);
+            //        }
                     
-                    break;
+            //        break;
 
-                case (int)Buildings.Helmholtz:
-                    scientistText.text = "I'm inside Helmholtz *pedomoon intensifies* " + consecutiveCounter.ToString();
+            //    case (int)Buildings.Helmholtz:
+            //        // Load Helmholtz scene if GPS Location is consecutively Humboldt for long enough
+            //        if ((!(building == Buildings.Helmholtz)) && consecutiveCounter > 3)
+            //        {
+            //            print(building);
+            //            LoadByIndex(4);
+            //        }
 
-                    // Load Helmholtz scene if GPS Location is consecutively Humboldt for long enough
-                    if ((!(building == Buildings.Helmholtz)) && consecutiveCounter > 3)
-                    {
-                        print(building);
-                        LoadByIndex(4);
-                    }
+            //        break;
 
-                    break;
-
-                case (int) Buildings.Zuse:
-                    scientistText.text = "I'm inside Zuse *pedomoon intensifies* " + consecutiveCounter.ToString();
-
-                    // Load Zuse scene if GPS Location is consecutively Humboldt for long enough
-                    if ((!(building == Buildings.Zuse)) && consecutiveCounter > 3)
-                    {
-                        print(building);
-                        LoadByIndex(5);
-                    }
+            //    case (int) Buildings.Zuse:
+            //        // Load Zuse scene if GPS Location is consecutively Humboldt for long enough
+            //        if ((!(building == Buildings.Zuse)) && consecutiveCounter > 3)
+            //        {
+            //            print(building);
+            //            LoadByIndex(5);
+            //        }
                     
-                    break;
-                case 6:
-                    // Load Test Location
-                    scientistText.text = "I'm in the Test Location. " + consecutiveCounter.ToString();
-                    break;
-                case 0:
-                    // stay in current scene (error in GPS or location not found)
-                    scientistText.text = "I don't know where I am. To be or not to be...";
-                    break;
-            }
+            //        break;
+            //    case 6:
+            //        // Load Test Location
+            //        break;
+            //    case 0:
+            //        // stay in current scene (error in GPS or location not found)
+            //        break;
+            //}
 
             yield return new WaitForSeconds(CheckLocationInterval);
         }
@@ -144,6 +129,7 @@ public class MiniGameManager : MonoBehaviour
 
     private IEnumerator PrepareGame()
     {
+        MinigameSpecificStart();
         yield return new WaitForSeconds(0.5f);
         gameStarted = true;
     }

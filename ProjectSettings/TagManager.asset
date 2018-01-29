@@ -23,6 +23,9 @@ TagManager:
   - HMenuLockSym
   - DialogueBox
   - Scientist
+  - Boundary
+  - enemy
+  - HideableGUI
   layers:
   - Default
   - TransparentFX

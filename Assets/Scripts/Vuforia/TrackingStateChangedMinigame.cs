@@ -5,9 +5,7 @@ using Vuforia;
 
 public class TrackingStateChangedMinigame : DefaultTrackableEventHandler {
 
-    GameObject DialogueBoxGO;
-    GameObject HighscoreGO;
-    GameObject MiniGameManagerGO;
+    GameObject HideableGUI;
 
     protected override void Start()
     {
@@ -15,31 +13,15 @@ public class TrackingStateChangedMinigame : DefaultTrackableEventHandler {
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
 
-        DialogueBoxGO = GameObject.FindWithTag("DialogueBox");
-        HighscoreGO = GameObject.FindWithTag("ScoreManager");
-        MiniGameManagerGO = GameObject.FindWithTag("MinigameManager");
+        HideableGUI = GameObject.FindWithTag("HideableGUI");
 
-        if (DialogueBoxGO != null)
+        if (HideableGUI != null)
         {
-            DialogueBoxGO.SetActive(false);
+            HideableGUI.SetActive(false);
         }
         else
         {
-            Debug.Log("Couldn't find Dialogue Box. Did you forget to set the tag?");
-        }
-
-        if (HighscoreGO != null)
-        {
-            HighscoreGO.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Couldn't find Highscore. Did you forget to set the tag?");
-        }
-
-        if (MiniGameManagerGO == null)
-        {
-            Debug.Log("Couldn't find MinigameManager. Did you forget to set the tag?");
+            Debug.Log("Couldn't find HideableGUI. Did you forget to set the tag?");
         }
     }
 
@@ -74,15 +56,11 @@ public class TrackingStateChangedMinigame : DefaultTrackableEventHandler {
 
     void ShowGame()
     {
-        if(!MiniGameManagerGO.GetComponent<MiniGameManager>().GameHasStarted())
-            DialogueBoxGO.SetActive(true);
-        
-        HighscoreGO.SetActive(true);
+        HideableGUI.SetActive(true);
     }
 
     void HideGame()
     {
-        DialogueBoxGO.SetActive(false);
-        HighscoreGO.SetActive(false);
+        HideableGUI.SetActive(false);
     }
 }

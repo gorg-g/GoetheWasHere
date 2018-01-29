@@ -6,6 +6,16 @@ public class BPGameManager : MiniGameManager
 {   
     byte nCupsHit;
 
+    protected override void MinigameSpecificStart()
+    {
+        GameObject scoreManagerGO = GameObject.FindWithTag("ScoreManager");
+        if (scoreManagerGO != null)
+        {
+            scoreManager = scoreManagerGO.GetComponent<BPScoreManager>();
+            scoreManager.ReadHighscore();
+        }
+    }
+
 	// Update is called once per frame
 	void Update () 
     {

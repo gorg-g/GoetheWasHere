@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class ScoreManager : MonoBehaviour 
+public class ScoreManager : MonoBehaviour 
 {
     public Text scoreText;
     public Text highscoreText;
@@ -11,42 +11,25 @@ public abstract class ScoreManager : MonoBehaviour
     protected int scoreCounter;
     protected int highscoreCounter;
 
-    private string minigameName;
+    protected string minigameName;
 
-	void Start () 
-    {
-        scoreCounter = 0;
-        highscoreCounter = 0;
-
-        GameObject minigameManagerGO = GameObject.FindWithTag("MinigameManager");
-        if (minigameManagerGO != null)
-        {
-            minigameName = minigameManagerGO.GetComponent<MiniGameManager>().minigameName;
-            ReadHighscore();
-        }
-	}
-	
 	void Update () 
     {
         UpdateScoreText();
 	}
 
-    public void UpdateHighScore()
-    {
-        if (scoreCounter > highscoreCounter)
-        {
-            highscoreCounter = scoreCounter;
-        }
-    }
-
     public void UpdateScoreText()
     {
         scoreText.text = "Score: " + scoreCounter;
+
         highscoreText.text = "Highscore: " + highscoreCounter;
     }
 
     public void WriteHighscore()
     {
+        if (scoreCounter > highscoreCounter)
+            highscoreCounter = scoreCounter;
+        
         PlayerPrefs.SetInt(minigameName, highscoreCounter);
     }
 
