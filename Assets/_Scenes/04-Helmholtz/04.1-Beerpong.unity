@@ -2424,6 +2424,11 @@ Prefab:
       propertyPath: m_TagString
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
   m_IsPrefabParent: 0

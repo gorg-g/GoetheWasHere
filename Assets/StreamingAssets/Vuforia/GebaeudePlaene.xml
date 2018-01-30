@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="ZuseEGFluchtplan" size="1.000000 0.703251" />
     <ImageTarget name="ZuseKunstGebaeudeModel" size="1.000000 0.526105" />
     <ImageTarget name="HumboldtArt" size="1.000000 1.005332" />
     <ImageTarget name="KirchhoffKeller" size="1.000000 0.788670" />
