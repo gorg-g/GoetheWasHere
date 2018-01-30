@@ -226,11 +226,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children:
+  - {fileID: 1328242279}
   - {fileID: 676769760}
   - {fileID: 838459028}
   - {fileID: 1058980094}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &69494720
 Prefab:
@@ -883,7 +884,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 25947532}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &676769761
 MonoBehaviour:
@@ -1000,7 +1001,7 @@ Transform:
   - {fileID: 750120248}
   - {fileID: 838459027}
   m_Father: {fileID: 25947532}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838459029
 GameObject:
@@ -1578,7 +1579,7 @@ Transform:
   m_LocalScale: {x: 0.40000004, y: 0.40000004, z: 0.40000004}
   m_Children: []
   m_Father: {fileID: 25947532}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190193972 stripped
 GameObject:
@@ -1684,7 +1685,7 @@ Transform:
   - {fileID: 1542111544}
   - {fileID: 1025307659}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1328242277
 GameObject:
@@ -1694,8 +1695,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1328242279}
-  - component: {fileID: 1328242280}
   - component: {fileID: 1328242278}
+  - component: {fileID: 1328242280}
   m_Layer: 0
   m_Name: MinigameManager
   m_TagString: MinigameManager
@@ -1739,10 +1740,10 @@ Transform:
   m_GameObject: {fileID: 1328242277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.033333335, y: 0.033333335, z: 0.033333335}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 25947532}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1328242280
 MonoBehaviour:
@@ -1978,6 +1979,22 @@ Prefab:
     - target: {fileID: 1159309989845730, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
+        type: 2}
+      propertyPath: m_Text
+      value: "For this game you have to feed Humboldt\u2019s spider, Raffael. The
+        more flies he eats, the higher your score. But pay attention: whereas bigger
+        flies will give you more score, they will also fasten the game. The bees on
+        the other hand will lower your score. The hourglass will slow down the speed
+        of the collectables, whereas Goethe\u2019s energy drink will increase it respectively.
+        \n\nThe game ends after 90 seconds.\nMove the spider by using the joystick
+        on the lower right corner of the screen.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
@@ -2367,7 +2384,7 @@ RectTransform:
   - {fileID: 248996991}
   - {fileID: 944344500}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

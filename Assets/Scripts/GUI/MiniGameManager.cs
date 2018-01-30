@@ -41,7 +41,7 @@ public class MiniGameManager : MonoBehaviour
         int previousLocation = 0;
         int consecutiveCounter = 0;
 
-        while (true)
+        while (!gameEnded)
         {
             int playerLocation = gpsChecker.GetClosestBuilding();
 

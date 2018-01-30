@@ -25,6 +25,9 @@ public class UserInput : MonoBehaviour
 
     void Update()
     {
+        print(gameManager.GameHasStarted());
+        print(gameManager.GameHasEnded());
+
         if (gameManager.GameHasStarted() && !gameManager.GameHasEnded())
         {
             if (Application.platform == RuntimePlatform.IPhonePlayer)

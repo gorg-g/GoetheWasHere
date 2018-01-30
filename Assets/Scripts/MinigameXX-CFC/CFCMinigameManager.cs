@@ -64,35 +64,33 @@ public class CFCMinigameManager : MiniGameManager {
 				int rndm = Random.Range (0, 11);
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 				Quaternion spawnRotation = Quaternion.identity;
-                var m = Instantiate (collect [rndm], spawnPosition, spawnRotation);
-				m.transform.parent = GameObject.Find ("enemies").transform;
-                if (collect[rndm] == fast || collect[rndm] == slow)
+				
+                GameObject helper = GameObject.Find ("enemies");
+
+                if (helper != null)
                 {
-                    m.transform.Rotate(new Vector3(0, 0, 90));
+                    if (helper.activeSelf)
+                    {
+                        var m = Instantiate(collect[rndm], spawnPosition, spawnRotation);
+                        m.transform.parent = helper.transform;
+
+                        if (collect[rndm] == fast || collect[rndm] == slow)
+                        {
+                            m.transform.Rotate(new Vector3(0, 0, 90));
+                        }
+                    }
                 }
-
-
 
                 yield return new WaitForSeconds (spawnWait);
 			}
 		}
-        GameObject.FindWithTag("enemy").SetActive(false);
 	}
 
 	IEnumerator GameOver()
 	{
 		yield return new WaitForSeconds (minutes * 60);
 
+        GameObject.FindWithTag("enemy").SetActive(false);
         EndGame();
 	}
-
-	public void neustart(){
-		
-		Scene scene = SceneManager.GetActiveScene ();
-		//SceneManager.UnloadSceneAsync (scene.name);
-		SceneManager.LoadScene (scene.name);
-
-		gameIsOver = false;
-	}
-
 }
