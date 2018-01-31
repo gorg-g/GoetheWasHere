@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 116011086}
   m_Layer: 5
   m_Name: Dialogue
-  m_TagString: Untagged
+  m_TagString: DialogueBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -722,6 +722,7 @@ GameObject:
   - component: {fileID: 442738824}
   - component: {fileID: 442738823}
   - component: {fileID: 442738822}
+  - component: {fileID: 442738825}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -788,13 +789,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1976144877}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 442738825}
+        m_MethodName: LoadByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -836,6 +837,17 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442738820}
+--- !u!114 &442738825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 442738820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0683203e16cd4bb7b43b65cf28e4e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &487332017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,7 +1289,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1657784607}
+      - m_Target: {fileID: 1598738410}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2066,7 +2078,7 @@ GameObject:
   - component: {fileID: 945616582}
   m_Layer: 0
   m_Name: DialogeBox Zuse 2
-  m_TagString: DialogueBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3528,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1857322115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4013,6 +4025,48 @@ Transform:
   m_Father: {fileID: 1006725107}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001248435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2001248436}
+  - component: {fileID: 2001248437}
+  m_Layer: 0
+  m_Name: ZuseWinningCondition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2001248436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001248435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 369.91162, y: 468.5346, z: 208.49371}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2001248437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001248435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4ed47ce5eca4431b45dfbc97c0d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinDialogue: {fileID: 1857322114}
+  LoseDialogue: {fileID: 1053285289}
 --- !u!1 &2027310549
 GameObject:
   m_ObjectHideFlags: 0

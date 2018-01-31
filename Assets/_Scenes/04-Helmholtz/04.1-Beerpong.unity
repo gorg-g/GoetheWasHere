@@ -2190,7 +2190,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "Congratulations adventurer! You have hit all the cups and prove worthy
-    to Humbi. \n\nWait for your new quests which are explained here..."
+    to Helmholtz. \n\nSeems like you're a professional! But remember, drink responsibly!"
 --- !u!222 &1394783163
 CanvasRenderer:
   m_ObjectHideFlags: 0

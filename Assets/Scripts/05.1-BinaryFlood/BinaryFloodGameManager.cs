@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BinaryFloodGameManager : MiniGameManager 
+public class BinaryFloodGameManager : MiniGameManager
 {
     public PlaneController t1;
     public PlaneController t2;
@@ -14,8 +14,12 @@ public class BinaryFloodGameManager : MiniGameManager
 
     public GameObject Water;
 
+    public GameWinIndicator gameWin;
+
     public int nNumbersToPlay;
     public float waterSpeed = 0.8f;
+
+    public Text endText;
 
     bool one;
     bool two;
@@ -26,7 +30,10 @@ public class BinaryFloodGameManager : MiniGameManager
     int[] priorLevels;
     int level;
 
+
+
     float timeLastCorrect;
+
 
     protected override void MinigameSpecificStart()
     {
@@ -43,7 +50,7 @@ public class BinaryFloodGameManager : MiniGameManager
         t3.Activate();
         t4.Activate();
 
-        if(nNumbersToPlay > 15)
+        if (nNumbersToPlay > 15)
         {
             nNumbersToPlay = 15;
             Debug.Log("Maximum number of playable numbers is 15.");
@@ -224,7 +231,7 @@ public class BinaryFloodGameManager : MiniGameManager
         StartCoroutine(correctSolutionAnimation());
         LowerWater();
 
-        if (level < nNumbersToPlay-1)
+        if (level < nNumbersToPlay - 1)
         {
             level = level + 1;
 
@@ -293,6 +300,7 @@ public class BinaryFloodGameManager : MiniGameManager
         t3.gameOver = true;
         t4.gameOver = true;
 
+        gameWin.setGameWon(true);
         StartCoroutine(WinGameAnimation());
         EndGame();
 
@@ -301,6 +309,9 @@ public class BinaryFloodGameManager : MiniGameManager
     {
         Debug.Log("Spiel verloren!");
         //setze gameOver auf true --> kein Input mehr möglich
+        endText.text = "You were too slow. Z26 got destroyed by the flood.";
+        gameWin.setGameWon(false);
+
         t1.gameOver = true;
         t2.gameOver = true;
         t3.gameOver = true;

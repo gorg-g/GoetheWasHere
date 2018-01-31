@@ -59,3 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/05-Zuse/05.3-Item.unity
     guid: 5e8e466d78b303947b06d7d18281579f
+  - enabled: 1
+    path: Assets/_Scenes/06-Goethe.unity
+    guid: 3a0c3264f6b1a1b4d8a5353f71ba5bb2

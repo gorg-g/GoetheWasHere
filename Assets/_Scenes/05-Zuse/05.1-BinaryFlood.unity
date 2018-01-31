@@ -306,13 +306,19 @@ Prefab:
     - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
         type: 2}
       propertyPath: m_FontData.m_FontSize
-      value: 49
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
         type: 2}
       propertyPath: m_Text
-      value: 'Zuse said, the rules for this games are as follows: find out yourself,
-        smartypants.'
+      value: "\nFor this game you have to translate the the number on the top into
+        binary digits displayed beneath the room. You can do this by touching the
+        buttons with the numbers. They will then change from 0 to 1 or from 1 to 0.
+        Once you have the right combination of digits, the next number to be translated
+        will appear.\nBut hurry up! The room in the middle is flooding and you have
+        to translate the number before the room is filled up with water.\nPlease note:
+        the binary numbers are read from left to right (8-4-2-1)\n\nExample: 5 \u2192
+        0101\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1159309989845730, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
       propertyPath: m_TagString
@@ -337,6 +343,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159309989845730, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
@@ -463,6 +473,46 @@ Transform:
   - {fileID: 1967031253}
   - {fileID: 1482613783}
   m_Father: {fileID: 1357599908}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &355806844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 355806846}
+  - component: {fileID: 355806845}
+  m_Layer: 0
+  m_Name: GameWinIndicator
+  m_TagString: GameWinIndicator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &355806845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355806844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b178b160b2434da5b2c2dba9427eb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &355806846
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355806844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 369.91162, y: 468.5346, z: 208.49371}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &372831415
@@ -2729,7 +2779,7 @@ Prefab:
     - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
         type: 2}
       propertyPath: m_Text
-      value: gg well played talk again to the handsome dude with the glasses
+      value: Hey, kind of a math genius here... Well done!
       objectReference: {fileID: 0}
     - target: {fileID: 114223708563110116, guid: 2c2856480d6a543f0be110c3fa301964,
         type: 2}
@@ -2743,7 +2793,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1159309989845730, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1903222447438446, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
       propertyPath: m_Name
@@ -2762,6 +2812,15 @@ Prefab:
     - target: {fileID: 1159309989845730, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
       propertyPath: m_TagString
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964595387993072, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
+      propertyPath: m_Name
+      value: GameEndText
+      objectReference: {fileID: 0}
+    - target: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c2856480d6a543f0be110c3fa301964, type: 2}
@@ -2787,6 +2846,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0683203e16cd4bb7b43b65cf28e4e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1572660857 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114935307494206888, guid: 2c2856480d6a543f0be110c3fa301964,
+    type: 2}
+  m_PrefabInternal: {fileID: 1572660853}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1603578054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,8 +2904,10 @@ MonoBehaviour:
   t4: {fileID: 1881154405}
   PText: {fileID: 2062261631}
   Water: {fileID: 1482613782}
+  gameWin: {fileID: 355806845}
   nNumbersToPlay: 10
   waterSpeed: 1.2
+  endText: {fileID: 1572660857}
 --- !u!114 &1603578057
 MonoBehaviour:
   m_ObjectHideFlags: 0

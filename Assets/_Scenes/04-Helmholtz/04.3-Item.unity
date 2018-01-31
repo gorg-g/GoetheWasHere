@@ -1697,7 +1697,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hummm... one more present for you!
+  m_Text: Hummm... one more present for you! Take it for you! But be careful, they
+    are made with pure silver and are kind of heavy!
 --- !u!222 &1765665953
 CanvasRenderer:
   m_ObjectHideFlags: 0

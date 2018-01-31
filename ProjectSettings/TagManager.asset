@@ -27,6 +27,7 @@ TagManager:
   - enemy
   - HideableGUI
   - Hint
+  - GameWinIndicator
   layers:
   - Default
   - TransparentFX

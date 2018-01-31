@@ -1439,7 +1439,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: W o w ! Nice magic wand!
+  m_Text: Wow ! Nice magic wand! Abracadabra! Now you can turn into Harry Potter!
 --- !u!222 &1433633660
 CanvasRenderer:
   m_ObjectHideFlags: 0
