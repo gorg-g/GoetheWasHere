@@ -26,6 +26,7 @@ TagManager:
   - Boundary
   - enemy
   - HideableGUI
+  - Hint
   layers:
   - Default
   - TransparentFX

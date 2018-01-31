@@ -26,8 +26,17 @@ public class BinaryFloodGameManager : MiniGameManager
     int[] priorLevels;
     int level;
 
+    float timeLastCorrect;
+
     protected override void MinigameSpecificStart()
     {
+        GameObject scoreManagerGO = GameObject.FindWithTag("ScoreManager");
+        if (scoreManagerGO != null)
+        {
+            scoreManager = scoreManagerGO.GetComponent<BinaryFloodScoreManager>();
+            scoreManager.ReadHighscore();
+        }
+
         // Just to not click a panel by accident when starting game
         t1.Activate();
         t2.Activate();
@@ -43,16 +52,15 @@ public class BinaryFloodGameManager : MiniGameManager
         priorLevels = new int[nNumbersToPlay];
 
         number = Random.Range(1, 16); //init decimal number
-        print("Hallo geee bitttee was soll das denn");
-        print(number);
         PText.text = number.ToString();
         priorLevels[0] = number;
         level = 0;
+        timeLastCorrect = Time.time;
     }
 
     void FixedUpdate()
     {
-        if (gameStarted)
+        if (gameStarted && !gameEnded)
         {
             CheckStatus();
             CheckWinningCondition();
@@ -219,6 +227,12 @@ public class BinaryFloodGameManager : MiniGameManager
         if (level < nNumbersToPlay-1)
         {
             level = level + 1;
+
+            float deltaTime = Time.time - timeLastCorrect;
+            int changeScore = Mathf.RoundToInt(Mathf.Max((5.0f - deltaTime) * 20.0f, 0.0f));
+            scoreManager.IncreaseScore(changeScore);
+            timeLastCorrect = Time.time;
+
             priorLevels[level] = number;
             number = generateNumber();
             PText.text = number.ToString();
@@ -279,14 +293,9 @@ public class BinaryFloodGameManager : MiniGameManager
         t3.gameOver = true;
         t4.gameOver = true;
 
+        StartCoroutine(WinGameAnimation());
         EndGame();
 
-        //Spiel anhalten
-        Time.timeScale = 0;
-        //Zeit anzeigen
-        Debug.Log(Time.time);
-        //Weiter button
-        //Restart Button
     }
     void SpielVerloren()
     {
@@ -297,14 +306,8 @@ public class BinaryFloodGameManager : MiniGameManager
         t3.gameOver = true;
         t4.gameOver = true;
 
+        StartCoroutine(LoseGameAnimation());
         EndGame();
-
-        //Spiel anhalten
-        Time.timeScale = 0;
-
-        //Zeit anzeigen
-
-        //Restart Button
     }
 
     IEnumerator correctSolutionAnimation()
@@ -319,5 +322,27 @@ public class BinaryFloodGameManager : MiniGameManager
         t2.changeColorBack();
         t3.changeColorBack();
         t4.changeColorBack();
+    }
+
+    IEnumerator WinGameAnimation()
+    {
+        while (true)
+        {
+            PText.text = ":)";
+            yield return new WaitForSeconds(1);
+            PText.text = "(:";
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    IEnumerator LoseGameAnimation()
+    {
+        while (true)
+        {
+            PText.text = ":(";
+            yield return new WaitForSeconds(1);
+            PText.text = "):";
+            yield return new WaitForSeconds(1);
+        }
     }
 }

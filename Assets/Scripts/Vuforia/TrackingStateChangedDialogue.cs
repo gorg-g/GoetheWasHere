@@ -6,6 +6,7 @@ using Vuforia;
 public class TrackingStateChangedDialogue : DefaultTrackableEventHandler {
 
     GameObject DialogueBoxGO;
+    GameObject HintGO;
 
     protected override void Start()
     {
@@ -23,6 +24,18 @@ public class TrackingStateChangedDialogue : DefaultTrackableEventHandler {
         {
             Debug.Log("Couldn't find Dialogue Box. Did you forget to set the tag?");
         }
+
+        HintGO = GameObject.FindWithTag("Hint");
+
+        if (HintGO != null)
+        {
+            HintGO.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Couldn't find Hint. Did you forget to set the tag?");
+        }
+
     }
 
     public override void OnTrackableStateChanged(
@@ -57,12 +70,14 @@ public class TrackingStateChangedDialogue : DefaultTrackableEventHandler {
     void ShowDialogueBox()
     {
         DialogueBoxGO.SetActive(true);
+        HintGO.SetActive(false);
         GameObject.FindWithTag("Scientist").GetComponent<Animator>().SetBool("trackingActive", true);
     }
 
     void HideDialogueBox()
     {
         DialogueBoxGO.SetActive(false);
+        HintGO.SetActive(true);
         GameObject.FindWithTag("Scientist").GetComponent<Animator>().SetBool("trackingActive", false);
     }
 }

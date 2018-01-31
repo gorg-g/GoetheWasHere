@@ -2293,7 +2293,7 @@ Prefab:
     - target: {fileID: 114232341690197700, guid: 5a2089b9b0f044d35a041a5185f28ae0,
         type: 2}
       propertyPath: m_Text
-      value: "Over the rooftops of Ilmenau\r\nAt the Goetheh\xE4usschen the next day..."
+      value: "Over the rooftops of Ilmenau\r\nAt the Goetheh\xE4uschen the next day..."
       objectReference: {fileID: 0}
     - target: {fileID: 114728525436217692, guid: 5a2089b9b0f044d35a041a5185f28ae0,
         type: 2}

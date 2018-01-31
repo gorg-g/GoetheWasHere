@@ -18,6 +18,10 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreText();
 	}
 
+    public virtual void IncreaseScore(int incNPoints)
+    {
+    }
+
     public void UpdateScoreText()
     {
         scoreText.text = "Score: " + scoreCounter;
