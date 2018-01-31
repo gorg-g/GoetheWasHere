@@ -60,7 +60,7 @@ public class HintScientists : MonoBehaviour
                 return "Sometimes the solutions are so close! Maybe I should turn around - oh - a Zusebau-model!";
 
             case 8:// to find Goethe
-                return "Humm.. didn't Zuse say something starting with 'leib' and ending with 'nitz'. Heard that somewhere... Right - cookies!";
+                return "Humm.. didn't Zuse say something starting with 'Leib' and ending with 'nitz'. Heard that somewhere... Right - cookies!";
 
         }
         return "";
