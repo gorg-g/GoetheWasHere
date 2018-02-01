@@ -62,3 +62,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/06-Goethe.unity
     guid: 3a0c3264f6b1a1b4d8a5353f71ba5bb2
+  - enabled: 1
+    path: Assets/_Scenes/Circuit Race.unity
+    guid: f4258558dbc214b4bb080ac94c2e2284
