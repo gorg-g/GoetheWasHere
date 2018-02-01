@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: f7e25df6ad9134496bd58bb645e9278f
+timeCreated: 1517424184
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bauch
+    100002: Bone_016
+    100004: Bone_017
+    100006: Brustkorb
+    100008: Finger_L
+    100010: Finger_R_001
+    100012: Fu__L
+    100014: Fu__R_001
+    100016: //RootNode
+    100018: H_fte
+    100020: H_fte01
+    100022: Hals
+    100024: Hand
+    100026: Hand_L
+    100028: Hand_R_001
+    100030: HumbiKnochen
+    100032: Icosphere_001
+    100034: Knie
+    100036: Kopf
+    100038: Kopf_0
+    100040: Oberarm_L
+    100042: Oberarm_R_001
+    100044: Oberschenkel_L
+    100046: Oberschenkel_L_001
+    100048: Schulter_L
+    100050: Schulter_R_001
+    100052: Steuerbone
+    100054: Steuerbone_0
+    100056: trump_lp_model
+    100058: Unterarm_L
+    100060: Unterarm_R_001
+    100062: Unterschenkel_L
+    100064: Unterschenkel_R_001
+    100066: Zehen_L
+    100068: Zehen_R_001
+    400000: Bauch
+    400002: Bone_016
+    400004: Bone_017
+    400006: Brustkorb
+    400008: Finger_L
+    400010: Finger_R_001
+    400012: Fu__L
+    400014: Fu__R_001
+    400016: //RootNode
+    400018: H_fte
+    400020: H_fte01
+    400022: Hals
+    400024: Hand
+    400026: Hand_L
+    400028: Hand_R_001
+    400030: HumbiKnochen
+    400032: Icosphere_001
+    400034: Knie
+    400036: Kopf
+    400038: Kopf_0
+    400040: Oberarm_L
+    400042: Oberarm_R_001
+    400044: Oberschenkel_L
+    400046: Oberschenkel_L_001
+    400048: Schulter_L
+    400050: Schulter_R_001
+    400052: Steuerbone
+    400054: Steuerbone_0
+    400056: trump_lp_model
+    400058: Unterarm_L
+    400060: Unterarm_R_001
+    400062: Unterschenkel_L
+    400064: Unterschenkel_R_001
+    400066: Zehen_L
+    400068: Zehen_R_001
+    2100000: TrumpLPmat_002
+    2100002: Material_001
+    2300000: H_fte01
+    2300002: Hand
+    2300004: Knie
+    2300006: Kopf
+    2300008: Steuerbone
+    3300000: H_fte01
+    3300002: Hand
+    3300004: Knie
+    3300006: Kopf
+    3300008: Steuerbone
+    4300000: Kopf
+    4300002: Hand
+    4300004: Knie
+    4300006: H_fte01
+    4300008: Steuerbone
+    4300010: trump_lp_model
+    4300012: Icosphere_001
+    7400000: GoetheAnim3
+    7400002: GoetheAnim2
+    7400004: GoetheAnim1
+    7400006: GoetheAnim4
+    9500000: //RootNode
+    13700000: Icosphere_001
+    13700002: trump_lp_model
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GoetheAnim1
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 999
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoetheAnim2
+      takeName: Goethe-looking_down
+      firstFrame: 1
+      lastFrame: 588
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoetheAnim3
+      takeName: Goethe-Shaking-Head
+      firstFrame: 1
+      lastFrame: 855
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoetheAnim4
+      takeName: GoetheCrying
+      firstFrame: 1
+      lastFrame: 327
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 2
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

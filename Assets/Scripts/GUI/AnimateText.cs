@@ -9,31 +9,37 @@ public class AnimateText : MonoBehaviour
     public int CharsPerAnimation = 5; //you can't get faster than framerate but you can take more chars at once
 
     Text textComponent;
+    string wholeText = "";
     string textToDisplay = "";
+    int startIndex = 0;
 
 	void Start () 
     {
         textComponent = GetComponent<Text>();
-        string initText = textComponent.text;
+        wholeText = textComponent.text;
 
-        StartCoroutine(Animate(initText));
+        StartCoroutine(Animate(wholeText));
 	}
+
+    void OnEnable()
+    {
+        StartCoroutine(Animate(wholeText));
+    }
 
     IEnumerator Animate(string textToAnimate)
     {
-        int i = 0;
-        while (i < textToAnimate.Length)
+        while (startIndex < textToAnimate.Length)
         {
             try
             {
-                textToDisplay += textToAnimate.Substring(i, CharsPerAnimation);
+                textToDisplay += textToAnimate.Substring(startIndex, CharsPerAnimation);
             }
             catch (System.ArgumentOutOfRangeException)
             {
-                textToDisplay += textToAnimate.Substring(i);
+                textToDisplay += textToAnimate.Substring(startIndex);
             }
 
-            i += CharsPerAnimation;
+            startIndex += CharsPerAnimation;
 
             textComponent.text = textToDisplay;
             yield return new WaitForSeconds(AnimationSpeed);

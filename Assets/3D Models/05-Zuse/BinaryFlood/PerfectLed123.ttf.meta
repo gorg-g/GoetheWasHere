@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 202ff8f53e84f6943b9ced3f374cc6e4
+timeCreated: 1516540894
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: PerfectLed123
+  fontNames:
+  - PerfectLed123
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

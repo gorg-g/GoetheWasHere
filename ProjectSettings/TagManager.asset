@@ -23,6 +23,12 @@ TagManager:
   - HMenuLockSym
   - DialogueBox
   - Scientist
+  - Boundary
+  - enemy
+  - HideableGUI
+  - Hint
+  - GameWinIndicator
+  - Spider
   layers:
   - Default
   - TransparentFX

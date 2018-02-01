@@ -14,5 +14,6 @@ public class SetWinningCondition : MonoBehaviour {
     public void SetWinningState (bool winningState)
     {
         playerWon = winningState;
+        GetComponent<Animator>().SetBool("gameWon", playerWon);
     }
 }
