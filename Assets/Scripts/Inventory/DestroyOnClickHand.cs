@@ -12,7 +12,11 @@ public class DestroyOnClickHand : MonoBehaviour {
 	private GameObject Conversation;
 	private Text ConversationText;
 
-	void OnMouseDown(){ 
+    public AudioSource pickupSound;
+
+	void OnMouseDown()
+    {
+        pickupSound.Play();
 		Destroy(gameObject);
 		MainCameraHumboldt = GameObject.Find ("Inventory");
         MainCameraHelmholtz = GameObject.Find ("InventoryHelmholtzDialogue");

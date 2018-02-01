@@ -12,7 +12,10 @@ public class DestroyOnClickCrown : MonoBehaviour {
 	private GameObject Conversation;
 	private Text ConversationText;
 
+    public AudioSource pickupSound;
+
 	void OnMouseDown(){ 
+        pickupSound.Play();
 		Destroy(gameObject);
 		MainCameraHumboldt = GameObject.Find ("Inventory");
         MainCameraZuse = GameObject.Find ("InventoryZuseDialogue");

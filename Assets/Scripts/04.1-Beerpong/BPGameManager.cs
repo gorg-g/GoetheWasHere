@@ -14,6 +14,8 @@ public class BPGameManager : MiniGameManager
             scoreManager = scoreManagerGO.GetComponent<BPScoreManager>();
             scoreManager.ReadHighscore();
         }
+
+        GetComponent<AudioSource>().Play();
     }
 
 	// Update is called once per frame

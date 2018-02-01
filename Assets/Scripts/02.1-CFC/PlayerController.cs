@@ -18,12 +18,15 @@ public class PlayerController : MonoBehaviour {
 
 	private Animator anim;
 
+    private AudioSource spiderAudio;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
 		anim = sp.GetComponent <Animator>();
 		level = 0;
+
+        spiderAudio = GameObject.FindWithTag("Spider").GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -39,11 +42,23 @@ public class PlayerController : MonoBehaviour {
 
 		if (x != 0 || y != 0) 
         {
-			anim.SetBool ("walking", walking);
-		} else {
-			walking = false;
+            if (!spiderAudio.isPlaying)
+            {
+                spiderAudio.Play();
+            }
+
 			anim.SetBool ("walking", walking);
 
+		} 
+        else 
+        {
+            if (spiderAudio.isPlaying)
+            {
+                spiderAudio.Stop();
+            }
+
+			walking = false;
+			anim.SetBool ("walking", walking);
 		}
 	}
 

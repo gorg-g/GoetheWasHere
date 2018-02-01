@@ -6,8 +6,10 @@ public class DestroyOnClick : MonoBehaviour {
 
 	public GameObject item;
 	public GameObject text;
+    public AudioSource pickupSound;
 
 	void OnMouseDown(){
+        pickupSound.Play();
 		Destroy(gameObject);
 		item.SetActive (true);
 		text.SetActive (true);

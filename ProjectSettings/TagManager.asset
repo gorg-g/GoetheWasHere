@@ -28,6 +28,7 @@ TagManager:
   - HideableGUI
   - Hint
   - GameWinIndicator
+  - Spider
   layers:
   - Default
   - TransparentFX

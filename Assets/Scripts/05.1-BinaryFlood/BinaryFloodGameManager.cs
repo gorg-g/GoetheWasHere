@@ -10,6 +10,8 @@ public class BinaryFloodGameManager : MiniGameManager
     public PlaneController t3;
     public PlaneController t4;
 
+    public AudioSource CorrectSound;
+
     public TextMesh PText;
 
     public GameObject Water;
@@ -43,6 +45,8 @@ public class BinaryFloodGameManager : MiniGameManager
             scoreManager = scoreManagerGO.GetComponent<BinaryFloodScoreManager>();
             scoreManager.ReadHighscore();
         }
+
+        GetComponent<AudioSource>().Play();
 
         // Just to not click a panel by accident when starting game
         t1.Activate();
@@ -233,6 +237,11 @@ public class BinaryFloodGameManager : MiniGameManager
 
         if (level < nNumbersToPlay - 1)
         {
+            if (!CorrectSound.isPlaying)
+            {
+                CorrectSound.Play();
+            }
+
             level = level + 1;
 
             float deltaTime = Time.time - timeLastCorrect;

@@ -35,6 +35,8 @@ public class CFCMinigameManager : MiniGameManager {
             scoreManager.ReadHighscore();
         }
 
+        GetComponent<AudioSource>().Play();
+
    		collect [0] = plus;
 		collect [1] = plus;
 		collect [2] = plus;

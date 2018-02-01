@@ -11,8 +11,10 @@ public class DestroyOnClickStick : MonoBehaviour {
 	private GameObject DialogueBox;
 	private GameObject Conversation;
 	private Text ConversationText;
+    public AudioSource pickupSound;
 
 	void OnMouseDown(){ 
+        pickupSound.Play();
 		Destroy(gameObject);
 		MainCameraHumboldt = GameObject.Find ("Inventory");
         MainCameraKirchhoff = GameObject.Find ("InventoryDialogueKirchhoff");
