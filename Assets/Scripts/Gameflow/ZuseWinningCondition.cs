@@ -6,6 +6,7 @@ public class ZuseWinningCondition : MonoBehaviour
 {
     public GameObject WinDialogue;
     public GameObject LoseDialogue;
+    public GameObject ProgressGame;
 
     public void Start()
     {
@@ -16,6 +17,7 @@ public class ZuseWinningCondition : MonoBehaviour
         if (gameWon)
         {
             WinDialogue.SetActive(true);
+            ProgressGame.SetActive(true);
             GameObject.FindWithTag("Scientist").GetComponent<SetWinningCondition>().SetWinningState(true);
         }
         else

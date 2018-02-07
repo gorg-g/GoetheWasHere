@@ -3211,6 +3211,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580c572a5d5454d0c9df3a36b864aaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1109246481
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548035773402324, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ab58fe7e05c484400a7a151dcb0e2d2c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1112457615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,7 +4856,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 228a50c4eed747d68ee07ac3ed91e7b6, type: 3}
+        m_Texture: {fileID: 2800000, guid: d0823bc423174ec4aca3b073ab0c0712, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []

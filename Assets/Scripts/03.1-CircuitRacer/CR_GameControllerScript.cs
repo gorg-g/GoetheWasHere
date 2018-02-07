@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CR_GameControllerScript : MonoBehaviour {
+public class CR_GameControllerScript : MiniGameManager {
 
     public Checkpoint check1;
     public Checkpoint check2;
@@ -18,12 +18,10 @@ public class CR_GameControllerScript : MonoBehaviour {
     public Checkpoint check12;
     public Checkpoint check13;
 
-    public Button btn;
-    public Button strt;
-
-    public Text scrtxt;
  
     public TrackBehaviour tb;
+
+    public CRScoreManager scoremng;
 
 
     public int score;
@@ -33,12 +31,10 @@ public class CR_GameControllerScript : MonoBehaviour {
     void Start () {
 
         Time.timeScale = 0;
-        btn.gameObject.SetActive(false);
-        scrtxt.gameObject.SetActive(false);
 
     }
 	
-	// Update is called once per frame
+
 	void Update () {
 
         if(spielVorbei == false)
@@ -48,11 +44,11 @@ public class CR_GameControllerScript : MonoBehaviour {
         
 		
 	}
-    
-     public void StartGame()
+
+    protected override void MinigameSpecificStart()
     {
-        strt.gameObject.SetActive(false);
         Time.timeScale = 1;
+        GetComponent<AudioSource>().Play();
     }
 
     void CheckStatus()
@@ -65,31 +61,25 @@ public class CR_GameControllerScript : MonoBehaviour {
 
     IEnumerator Gewonnen()
     {
+        
         spielVorbei = true;
         Debug.Log("Gewonnen!");
-        score = CalculateScore();
-        Debug.Log(score);
-        scrtxt.text = "Score: " + score;
+        scoremng.SetScore();
+
+        //scrtxt.text = "Score: " + score;
         yield return new WaitForSeconds(2);
         tb.ResetToOrigin();
+        EndGame();
 
-        btn.gameObject.SetActive(true);
-        scrtxt.gameObject.SetActive(true);
+        //btn.gameObject.SetActive(true);
+        //scrtxt.gameObject.SetActive(true);
 
         //yield return new WaitForSeconds(2);
-      
+
         Time.timeScale = 0;
 
     }
-    private int CalculateScore()
-    {
-        int s = Mathf.RoundToInt(500 - Time.time);
-        if (s <= 0)
-        {
-            return 0;
-        }
-        else return s;
-    }
+
 
     public void RestartGame()
     {

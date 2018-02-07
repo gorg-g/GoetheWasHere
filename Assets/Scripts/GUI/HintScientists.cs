@@ -61,7 +61,9 @@ public class HintScientists : MonoBehaviour
 
             case 8:// to find Goethe
                 return "Humm.. didn't Zuse say something starting with 'Leib' and ending with 'nitz'. Heard that somewhere... Right - cookies!";
-
+            
+            case 420:
+                return "Go to the campus map if u do not kno da wae, fgt? :DDD perkele, vitun aloittelija!";
         }
         return "";
     }
