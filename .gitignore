@@ -1,26 +1,2 @@
 
 \.DS_Store
-
-Builds/
-
-Library/
-
-Temp/
-
-UnityPackageManager/
-
-GoetheWasHere\.Editor\.Plugins\.csproj
-
-GoetheWasHere\.Editor\.csproj
-
-GoetheWasHere\.Plugins\.csproj
-
-GoetheWasHere\.csproj
-
-GoetheWasHere\.sln
-
-ProjectSettings/
-
-QCAR/
-
-GoetheWasHere\.userprefs
